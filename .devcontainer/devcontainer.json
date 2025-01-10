@@ -13,16 +13,14 @@
 
     // オプションの 'workspaceFolder' プロパティは、接続時に VS Code がデフォルトで開くパスです。
     // これは通常、.devcontainer/docker-compose.yml のファイルマウントです。
-    // "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}"
-    "workspaceFolder": "/workspaces",
+    // "workspaceFolder": "/workspace/${localWorkspaceFolderBasename}"
+    "workspaceFolder": "/workspace",
 
     // 開発コンテナに追加する機能。詳細情報: https://containers.dev/features.
     // "features": {},
 
     // 'forwardPorts' を使用して、コンテナ内のポートをローカルで利用可能にするポートのリストを作成します。
-    "forwardPorts": [
-        3306
-    ],
+    "forwardPorts": [3306],
     "customizations": {
         "vscode": {
             "extensions": [

@@ -6,10 +6,10 @@ ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
 # 作業ディレクトリを設定
-WORKDIR /workspaces
+WORKDIR /workspace
 
 # 依存関係をインストール
-COPY requirements.txt /workspaces/
+COPY requirements.txt /workspace/
 RUN pip install --upgrade pip && pip install -r requirements.txt
 
 # プロジェクトをコピー

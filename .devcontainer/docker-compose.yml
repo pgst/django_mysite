@@ -11,8 +11,7 @@ services:
 
         volumes:
             # プロジェクトのフォルダーをVS Codeにマウントしたい場所をここに更新してください
-            # - ..:/workspaces:cached
-            - .:/workspaces:cached
+            - .:/workspace:cached
 
         # C++、Go、Rustなどのptraceベースのデバッガを使用する場合は、次の4行のコメントを解除してください。
         # cap_add:
