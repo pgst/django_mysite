@@ -1,0 +1,83 @@
+[
+    {
+        "model": "core.item",
+        "pk": 2,
+        "fields": {
+            "name": "Item 2",
+            "price": 2000,
+            "description": "Description for Item 2"
+        }
+    },
+    {
+        "model": "core.item",
+        "pk": 3,
+        "fields": {
+            "name": "Item 3",
+            "price": 3000,
+            "description": "Description for Item 3"
+        }
+    },
+    {
+        "model": "core.item",
+        "pk": 4,
+        "fields": {
+            "name": "Item 4",
+            "price": 4000,
+            "description": "Description for Item 4"
+        }
+    },
+    {
+        "model": "core.item",
+        "pk": 5,
+        "fields": {
+            "name": "Item 5",
+            "price": 5000,
+            "description": "Description for Item 5"
+        }
+    },
+    {
+        "model": "core.item",
+        "pk": 6,
+        "fields": {
+            "name": "Item 6",
+            "price": 6000,
+            "description": "Description for Item 6"
+        }
+    },
+    {
+        "model": "core.item",
+        "pk": 7,
+        "fields": {
+            "name": "Item 7",
+            "price": 7000,
+            "description": "Description for Item 7"
+        }
+    },
+    {
+        "model": "core.item",
+        "pk": 8,
+        "fields": {
+            "name": "Item 8",
+            "price": 8000,
+            "description": "Description for Item 8"
+        }
+    },
+    {
+        "model": "core.item",
+        "pk": 9,
+        "fields": {
+            "name": "Item 9",
+            "price": 9000,
+            "description": "Description for Item 9"
+        }
+    },
+    {
+        "model": "core.item",
+        "pk": 10,
+        "fields": {
+            "name": "Item 10",
+            "price": 10000,
+            "description": "Description for Item 10"
+        }
+    }
+]

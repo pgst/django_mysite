@@ -13,6 +13,28 @@
     <form action="" method="post">{% csrf_token %}
         
         {# Signup form #}
+        {% for field in form %}
+        <div class="mb-3">
+            {{ field.label_tag }}
+            {{ field }}
+            <span class="form-text">{{ field.help_text }}</span>
+            {% if field.errors %}
+            <div class="alert alert-danger" role="alert">
+                {{ field.errors }}
+            </div>
+            {% endif %}
+        </div>
+        {% endfor %}
+
+        {% if form.non_field_errors %}
+        <div class="alert alert-danger" role="alert">
+            {{ form.non_field_errors }}
+        </div>
+        {% endif %}
+{% comment %}
+        {{ form.as_p }}
+{% endcomment %}
+{% comment "form" %}
         <div class="mb-3">
             {# ユーザー名入力欄 #}
             <label for="id_username">ユーザー名:</label>
@@ -28,17 +50,13 @@
             <label for="id_password2">パスワード(確認用):</label>
             <input type="password" id="id_password2" required class="form-control">
         </div>
+{% endcomment %}
 
         {# Submit button #}
         <div class="text-center">
-            {% comment %}
-            まだSignupViewは仮実装（TemplateViewでレンダリングするだけ）
-            なので、以下の"新規作成"ボタンは機能しません。
-            {% endcomment %}
             <a href="{% url 'login' %}" class="btn btn-secondary">作成済みの方はこちら</a>
             <button type="submit" class="btn btn-dark">新規作成</button>
         </div>
-
     </form>
 
 </div>

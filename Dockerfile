@@ -1,4 +1,5 @@
-FROM python:3
+# Microsoftが提供するVisual Studio Codeの開発コンテナ用のPythonイメージ
+FROM mcr.microsoft.com/vscode/devcontainers/python:3
 
 # 環境変数を設定
 ENV PYTHONDONTWRITEBYTECODE 1

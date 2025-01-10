@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
 
 
 {% block title %}決済完了{% endblock title %}
@@ -6,6 +6,9 @@
 
 {% block content %}
 
-<h1>決済完了ページ</h1>
+<div class="text-center">
+    <p>決済処理が正常に行われました。お買い上げありがとうございました。</p>
+    <a href="{% url 'home' %}" class="btn btn-secondary">ホームに戻る</a>
+</div>
 
 {% endblock content %}

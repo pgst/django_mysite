@@ -41,7 +41,7 @@
                 "batisteo.vscode-django"
             ]
         }
-    }
+    },
 
     // Docker Compose 設定で特定のサービスを開始したい場合は、次の行のコメントを解除します。
     // "runServices": [],
@@ -56,5 +56,5 @@
     // "customizations": {},
 
     // コンテナのデフォルト以外の既存のユーザーとして接続する場合は、コメントを解除します。詳細情報: https://aka.ms/dev-containers-non-root.
-    // "remoteUser": "devcontainer"
+    "remoteUser": "vscode"
 }

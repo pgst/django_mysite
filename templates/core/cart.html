@@ -8,6 +8,7 @@
 
 <div class="mx-auto" style="max-width: 960px">
     
+    {% if cart.cart_items.exists %}
     {# Table of cart contents #}
     <table class="table align-middle text-center">
         <thead class="table-dark">
@@ -19,34 +20,20 @@
             </tr>
         </thead>
         <tbody>
+            {% for cart_item in cart.cart_items.all %}
             {# ---------- Each cart item ---------- #}
             <tr>
-                <td>{# ここに商品名 #}商品１</td>
-                <td>{# ここに商品単価 #}2000円</td>
-                <td>{# ここに購入数 #}1</td>
-                <td class="text-end">{# ここに商品合計 #}2000円</td>
+                <td>{{ cart_item.item.name }}</td>
+                <td>{{ cart_item.item.price }}円</td>
+                <td>{{ cart_item.quantity }}</td>
+                <td class="text-end">{{ cart_item.total_price }}円</td>
             </tr>
             {# ---------- Each cart item ---------- #}
-
-            {# ---------- Each cart item ---------- #}
+            {% endfor %}
             <tr>
-                <td>{# ここに商品名 #}商品２</td>
-                <td>{# ここに商品単価 #}3000円</td>
-                <td>{# ここに購入数 #}1</td>
-                <td class="text-end">{# ここに商品合計 #}3000円</td>
-            </tr>
-            {# ---------- Each cart item ---------- #}
-            
-            {# ---------- Each cart item ---------- #}
-            <tr>
-                <td>{# ここに商品名 #}商品３</td>
-                <td>{# ここに商品単価 #}4000円</td>
-                <td>{# ここに購入数 #}3</td>
-                <td class="text-end">{# ここに商品合計 #}12000円</td>
-            </tr>
-            {# ---------- Each cart item ---------- #}
-            <tr>
-                <td class="text-end fw-bolder fs-5" colspan="4">総額：{# ここにカート総額 #}17000円</td>
+                <td class="text-end fw-bolder fs-5" colspan="4">
+                    総額：{{ cart.total_price }}円
+                </td>
             </tr>
         </tbody>
     </table>
@@ -62,7 +49,12 @@
             <button type="submit" class="btn btn-dark">購入へ進む</a>
         </form>
     </div>
-    
+    {% else %}
+    <div class="text-center">
+        <p>カートは空です。</p>
+        <a href="{% url 'home' %}" class="btn btn-secondary">商品を探す</a>
+    </div>
+    {% endif %}
 </div>
     
 {% endblock content %}
