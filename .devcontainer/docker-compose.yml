@@ -1,0 +1,24 @@
+services:
+    # docker-compose.ymlファイルで作業するサービスの名前をここに更新してください
+    web:
+        # .devcontainerフォルダー内のサービスのDockerfileをオーバーライドしたい場合はコメントを解除してください。
+        # Dockerfileとコンテキストのパスは、*プライマリ* docker-compose.ymlファイル（devcontainer.jsonの"dockerComposeFile"配列の最初のファイル）に対して相対的であることに注意してください。
+        # 以下のサンプルは、プライマリファイルがプロジェクトのルートにあると仮定しています。
+        #
+        # build:
+        #   context: .
+        #   dockerfile: .devcontainer/Dockerfile
+
+        volumes:
+            # プロジェクトのフォルダーをVS Codeにマウントしたい場所をここに更新してください
+            # - ..:/workspaces:cached
+            - .:/workspaces:cached
+
+        # C++、Go、Rustなどのptraceベースのデバッガを使用する場合は、次の4行のコメントを解除してください。
+        # cap_add:
+        #   - SYS_PTRACE
+        # security_opt:
+        #   - seccomp:unconfined
+
+        # プロセスが終了した後にシャットダウンしないようにデフォルトのコマンドをオーバーライドします。
+        command: sleep infinity

@@ -1,0 +1,34 @@
+{% load bootstrap5 %}  <!-- カスタムテンプレートタグの読み込み -->
+{% load static %}      <!-- 静的ファイルの読み込み -->
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colaughul | {% block title %}{% endblock title %}</title>
+
+    <!-- Bootstrap5のCSSを読み込む -->
+    {% bootstrap_css %}
+    <!-- Bootstrap5のJavaScriptを読み込む -->
+    {% bootstrap_javascript %}
+
+    <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/png">
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+</head>
+<body>
+    {% include "_navbar.html" %}
+
+    {% block header %}{% endblock header %}
+
+    <main class="bg-light">
+        <section class="container py-5 bg-white">
+            <div class="px-4 px-lg-5 my-5">
+                {% block content %}{% endblock content %}
+            </div>
+        </section>
+    </main>
+
+    {% include "_footer.html" %}
+</body>
+</html>
