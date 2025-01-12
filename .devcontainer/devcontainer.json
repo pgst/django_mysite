@@ -13,8 +13,8 @@
 
     // オプションの 'workspaceFolder' プロパティは、接続時に VS Code がデフォルトで開くパスです。
     // これは通常、.devcontainer/docker-compose.yml のファイルマウントです。
-    // "workspaceFolder": "/workspace/${localWorkspaceFolderBasename}"
-    "workspaceFolder": "/workspace",
+    // "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}"
+    "workspaceFolder": "/workspaces",
 
     // 開発コンテナに追加する機能。詳細情報: https://containers.dev/features.
     // "features": {},
@@ -36,7 +36,8 @@
                 "mechatroner.rainbow-csv",
                 "shardulm94.trailing-spaces",
                 "ms-python.vscode-pylance",
-                "batisteo.vscode-django"
+                "batisteo.vscode-django",
+                "charliermarsh.ruff"
             ]
         }
     },
